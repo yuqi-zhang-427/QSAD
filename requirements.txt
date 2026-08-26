@@ -1,0 +1,23 @@
+# Core scientific stack
+numpy
+pandas
+scipy
+
+# Quantum (IBM Runtime + simulators)
+qiskit
+qiskit-aer
+qiskit-ibm-runtime
+
+# Structural biology: sidechain rebuild, scoring, relax (Stage 3/4)
+# PyRosetta must be installed separately via RosettaCommons (academic license):
+#   https://www.pyrosetta.org/downloads
+# pyrosetta
+
+# OpenMM (Stage 4 MD annealing) + PDBFixer
+# openmm and pdbfixer are typically installed via conda:
+#   conda install -c conda-forge openmm pdbfixer
+# openmm
+# pdbfixer
+
+# Optional: PDB parsing used by some scorers
+biopython

@@ -1,0 +1,29 @@
+QSAD — a quantum-sampled protein folding pipeline
+Copyright 2026 Yuqi Zhang
+
+This product includes software developed by Yuqi Zhang, licensed under the
+Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------
+
+Protein_Folding/
+    Contains code derived from the protein-folding problem implementation of
+    Qiskit Nature.
+
+        (C) Copyright IBM 2021, 2022.
+
+    That code is licensed under the Apache License, Version 2.0, a copy of
+    which is included in LICENSE and is also available at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    The original copyright headers are retained in the individual source
+    files. Files in this directory have been modified for QSAD: the sampling
+    entry points, the Miyazawa-Jernigan interaction wiring, and the qubit
+    encoding used by Stage 1 differ from the upstream implementation.
+
+qsadpp/mj_matrix.txt
+    Miyazawa-Jernigan contact-energy matrix, transcribed from the published
+    statistical potential of Miyazawa and Jernigan.

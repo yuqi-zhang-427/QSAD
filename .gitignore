@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Pipeline outputs — the artifact ships code only. Every sampling result,
+# including Stage-1 samples, is produced by running the pipeline.
+quantum_data/
+
+# Other pipeline outputs (run-time only, never committed)
+sampling_results/
+Sampling_result/
+pp_result/
+qsad_pdb_results/
+logs/
+*.log
+
+# Resolved IBM credentials — never commit
+ibm_config.txt
+
+# OS
+.DS_Store
