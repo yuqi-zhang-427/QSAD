@@ -19,5 +19,9 @@ qiskit-ibm-runtime
 # openmm
 # pdbfixer
 
+# Energy-landscape analysis and figures (Stage 4)
+matplotlib
+scikit-learn
+
 # Optional: PDB parsing used by some scorers
 biopython

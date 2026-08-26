@@ -11,10 +11,17 @@ Quantum-sampled protein folding pipeline — from quantum bitstring
 sampling to an all-atom PDB coordinate set. The prediction target is the
 protein **backbone**; see [Scope of the reconstruction](#scope-of-the-reconstruction).
 
-This is a **code-only** artifact: no sampling results are bundled. Every
-file the pipeline consumes downstream is produced by running Stage 1,
-which by default executes on the local `qiskit-aer` simulator and needs
-no credentials of any kind.
+The prediction pipeline (Stages 1–3) is **code-only**: no sampling results
+are bundled, and everything the pipeline consumes downstream is produced by
+running Stage 1, which by default executes on the local `qiskit-aer` simulator
+and needs no credentials of any kind.
+
+Stage 4 is different. It reproduces the paper's energy-landscape figures
+(Fig. 9 and Fig. 10) from **recorded utility-scale QPU runs** shipped in
+`qpu_samples/` — 120-qubit and 49-qubit circuits executed on
+`ibm_cleveland`. Those circuits are far beyond classical simulation, so the
+recorded samples are the reproducible starting point; see
+[Stage 4](#stage-4--energy-landscape-figures-fig-9-and-fig-10).
 
 ## Pipeline stages
 
@@ -49,6 +56,17 @@ tasks.csv
 │   modules: post_process/{decom, ca2all, polish}              │
 │   output:  qsad_pdb_results/<pdbid>.pdb                      │
 │            qsad_pdb_results/build_summary.csv                │
+└──────────────────────────────────────────────────────────────┘
+
+qpu_samples/  (recorded 120- and 49-qubit runs on ibm_cleveland)
+   │
+   ▼
+┌──────────────────────────────────────────────────────────────┐
+│ Stage 4: energy-landscape analysis  →  paper Fig. 9 / Fig. 10│
+│   entry: run_landscape.py, plot_landscapes.py                │
+│   modules: post_process/landscape/                           │
+│   output:  landscape_result/data/<pdbid>_landscape.json      │
+│            landscape_result/figures/<pdbid>_landscape.{pdf,png}│
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -93,11 +111,16 @@ QSAD/
 ├── sampling/                  # quantum sampling (ansatz, backends, runner)
 ├── Protein_Folding/           # MJ Hamiltonian + ProteinFoldingProblem
 ├── qsadpp/                    # decode / energy / feature orchestrator
+├── run_landscape.py           # Stage 4 analysis
+├── plot_landscapes.py         # Stage 4 figures (Fig. 9 / Fig. 10)
 ├── post_process/
 │   ├── decom/                 # bitstring → lattice coords
 │   ├── rerank/                # candidate model + geometric scoring
 │   ├── ca2all/                # NERF backbone + rotamer side-chain
-│   └── polish/                # optional PyRosetta side-chain refinement
+│   ├── polish/                # optional PyRosetta side-chain refinement
+│   └── landscape/             # energy-landscape analysis (Stage 4)
+├── figs/                      # figure styling used by the paper figures
+├── qpu_samples/               # recorded ibm_cleveland runs (1a0q, 4y79)
 ├── task_input/
 │   └── tasks.csv              # input proteins (pdbid + sequence)
 ├── ibm_config.txt.template    # only needed for live-QPU runs
@@ -120,6 +143,10 @@ cd QSAD
 ```bash
 conda create -n qsad python=3.10 -y
 conda activate qsad
+# Take scipy and scikit-learn from conda: on recent macOS the PyPI wheels
+# for Python 3.10 can fail to load (dyld rejects scipy's _propack
+# extension with a "zero-fill section type" error).
+conda install -c conda-forge scipy scikit-learn -y
 pip install -r requirements.txt
 ```
 
@@ -237,6 +264,51 @@ For each pdbid under `pp_result/`, Stage 3 selects the lowest-`E_total`
 record and produces `qsad_pdb_results/<pdbid>.pdb` together with a
 `build_summary.csv` row (columns: `pdbid, sequence, length, best_E_total,
 final_energy, status, message, output_pdb`).
+
+### Stage 4 — energy-landscape figures (Fig. 9 and Fig. 10)
+
+The paper's central result is the energy landscape recovered from
+utility-scale QPU sampling. Two recorded runs on `ibm_cleveland` ship with the
+artifact:
+
+| protein | L | qubits | shots | QPU wall clock |
+|---|---|---|---|---|
+| `1a0q` | 16 | **120** | 240,000 | 6381 s |
+| `4y79` | 9 | 49 | 240,000 | 688 s |
+
+These circuits cannot be simulated classically — a 120-qubit statevector is
+out of reach, and matrix-product-state simulation of the 49-qubit circuit
+already fails to finish a single 100-shot job in minutes. The recorded samples
+are therefore the reproducible starting point; every step after them is
+deterministic and runs on a laptop.
+
+```bash
+# 4a. analysis: samples → per-protein landscape record
+python run_landscape.py
+
+# 4b. figures: landscape → the two paper figures
+python plot_landscapes.py
+```
+
+`run_landscape.py` decodes every sampled bitstring, keeps the self-avoiding
+walks, scores them with the lattice contact potential, projects them onto two
+principal components, and writes `landscape_result/data/<pdbid>_landscape.json`
+plus `landscape_summary.csv`. Expected values:
+
+| protein | valid SAW conformations | unique bitstrings | funnel score | basins |
+|---|---|---|---|---|
+| `1a0q` | 266 | 207,324 | 0.745 | 6 |
+| `4y79` | 683 | 4,092 | 0.261 | 4 |
+
+`plot_landscapes.py` then writes
+`landscape_result/figures/<pdbid>_landscape.{pdf,png}` — `1a0q` is Fig. 9 and
+`4y79` is Fig. 10 in the paper. Both take about a minute in total.
+
+The numbers above are exact and version-independent. The figures are
+pixel-identical to the published ones under the library versions used for the
+paper; a freshly resolved environment gives visually identical figures with
+sub-pixel rendering differences (under 0.5% of pixels) from `matplotlib` and
+`numpy` patch releases.
 
 ## Environment variables
 

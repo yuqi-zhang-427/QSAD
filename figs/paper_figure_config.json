@@ -1,0 +1,203 @@
+{
+  "_note": "Edit this file to adjust the final paper figures. After updating it, run `python figs/paper_figure_manager.py rebuild --all` or rebuild a single figure with `--figure <name>`.",
+  "defaults": {
+    "python": "/Users/zhangy14/miniforge3/envs/qsad/bin/python",
+    "rcParams": {
+      "font.family": "sans-serif",
+      "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+      "pdf.fonttype": 42,
+      "ps.fonttype": 42
+    }
+  },
+  "groups": {
+    "noise": {
+      "colors": {
+        "vqe": "#E74C3C",
+        "sampling": "#2471A3",
+        "ground_truth": "#27AE60"
+      }
+    },
+    "sampling": {
+      "colors": {
+        "random": "#AAAAAA",
+        "single_evolved": "#FF6B6B",
+        "stratified": "#2C73D2",
+        "accent": "#00C49A"
+      }
+    },
+    "rmsd": {
+      "method_colors": {
+        "qsad": "#283593",
+        "af3": "#D32F2F",
+        "colabfold_msa": "#EF6C00",
+        "colabfold": "#F9A825",
+        "esmfold": "#7B1FA2",
+        "omegafold": "#00838F",
+        "openfold": "#C2185B",
+        "vqe": "#4E342E"
+      }
+    },
+    "landscape": {
+      "colors": {
+        "minimum": "#D7263D",
+        "maximum_probability": "#2E86DE",
+        "histogram": "#A9C2F0",
+        "kde": "#F17C35",
+        "boltzmann_fit": "#67C26F"
+      }
+    },
+    "quantum_classic": {
+      "colors": {
+        "qsad": "#2C73D2",
+        "qsad_mini": "#2C73D2",
+        "random": "#8D99AE",
+        "greedy": "#F4A261",
+        "sa": "#F28482"
+      }
+    }
+  },
+  "figures": {
+    "fig_vqe_trajectories": {
+      "font_scale": 1.0,
+      "figsize": [11.1, 5.4],
+      "titles": {
+        "suptitle": "",
+        "panel_a": "(a) Simulated VQE (0%-5% noise)",
+        "panel_b": "(b) Real QPU VQE on 3ans"
+      }
+    },
+    "fig2_noise_resilience": {
+      "scale": 1.0,
+      "figsize": [7.05, 2.65],
+      "titles": {
+        "panel_a": "(a) Best Energy",
+        "panel_b": "(b) Coverage"
+      },
+      "labels": {
+        "xlabel": "Per-gate Error Rate (ε)",
+        "ylabel_energy": "Best Energy",
+        "ylabel_coverage": "Coverage (%)"
+      }
+    },
+    "fig3_advantage_multiplier_compact": {
+      "scale": 1.75,
+      "figsize": [11.4, 3.15],
+      "titles": {
+        "panel_a": "(a) Clean (0%)",
+        "panel_b": "(b) Extreme noise (5%)"
+      },
+      "labels": {
+        "supxlabel": "Sampling / VQE ratio"
+      }
+    },
+    "fig4_performance_heatmap": {
+      "scale": 1.7,
+      "figsize": [19.4, 9.0],
+      "titles": {
+        "panel_a": "VQE",
+        "panel_b": "Sampling (Ours)"
+      },
+      "labels": {
+        "xlabel": "Noise Level (ε)",
+        "colorbar": "Normalised Score\n(0 = worst, 1 = best)"
+      }
+    },
+    "rmsd_violin": {
+      "font_scale": 1.0,
+      "figsize": [6.05, 3.9],
+      "titles": {
+        "main": ""
+      },
+      "labels": {
+        "ylabel": "RMSD (Å)"
+      }
+    },
+    "qsad_vs_baselines": {
+      "font_scale": 1.0,
+      "figsize": [7.24, 4.45],
+      "titles": {
+        "main": "",
+        "summary_panel": "",
+        "violin_panel": "(h) RMSD Distribution"
+      }
+    },
+    "1a0q_landscape": {
+      "font_scale": 1.45,
+      "figsize": [25.5, 6.9]
+    },
+    "4y79_landscape": {
+      "font_scale": 1.45,
+      "figsize": [25.5, 6.9]
+    },
+    "fig_exp1_qsad_vs_classic_compact": {
+      "font_scale": 0.95,
+      "figsize": [6.8, 2.55],
+      "titles": {
+        "panel_a": "(a) RMSD Improvement",
+        "panel_b": "(b) Near-Native Yield"
+      },
+      "labels": {
+        "note": ""
+      }
+    },
+    "fig_exp4_qsad_vs_classic_compact": {
+      "font_scale": 0.95,
+      "figsize": [6.8, 2.55],
+      "titles": {
+        "panel_a": "(a) RMSD ECDF",
+        "panel_b": "(b) RMSD Improvement"
+      },
+      "labels": {
+        "note": ""
+      }
+    },
+    "fig_exp2a_structures_2a14": {
+      "font_scale": 2.5,
+      "titles": {
+        "suptitle": "",
+        "panel_a": "(a) Backbone",
+        "panel_b": "(b) Ca2All",
+        "panel_c": "(c) Polished",
+        "panel_d": "(d) Overlay"
+      }
+    },
+    "fig_exp2b_stage_band": {
+      "font_scale": 1.08,
+      "figsize": [6.8, 2.45],
+      "titles": {
+        "panel_a": "(a) RMSD Across Stages",
+        "panel_b": "(b) ΔRMSD Distribution"
+      },
+      "layout": {
+        "wspace": 0.22
+      }
+    },
+    "fig1_heatmap_comparison": {
+      "font_scale": 0.95,
+      "figsize": [7.15, 2.2],
+      "titles": {
+        "panel_a": "(a) Landscape",
+        "panel_b": "(b) Random",
+        "panel_c": "(c) Evolved",
+        "panel_d": "(d) Stratified"
+      },
+      "labels": {
+        "energy_colorbar": "Energy",
+        "prob_colorbar": "Prob.",
+        "xlabel": "Energy Rank (col)",
+        "ylabel": "Energy Rank (row)"
+      }
+    },
+    "fig5_cumulative_discovery": {
+      "font_scale": 1.5,
+      "figsize": [11.4, 5.6],
+      "titles": {
+        "main": "Cumulative Conformational Discovery"
+      },
+      "labels": {
+        "xlabel": "Cumulative Shots",
+        "ylabel": "Unique Conformations Discovered"
+      }
+    }
+  }
+}

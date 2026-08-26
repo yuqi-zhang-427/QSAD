@@ -1,0 +1,3 @@
+pdb_id,sequence,L,n_qubits,depth_mean,depth_max,avg_time_per_shot_sec,groups,seconds_total,effective_samples
+1a0q,LCKRGYYGRSNVDYWG,16,120,,,0.026589,10,6381.362797,240000
+4y79,DACQGDSGG,9,49,,,0.002865,10,687.561083,240000

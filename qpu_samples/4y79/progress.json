@@ -1,0 +1,441 @@
+{
+  "created_at": "2026-03-22T21:43:35Z",
+  "groups": {
+    "0": {
+      "csv": "qpu_samples/4y79/samples_4y79_group0_ibm.csv",
+      "finished_at": "2026-03-22T21:44:47Z",
+      "rows": 24000,
+      "run_seed": 1455363123,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:44:06.569964-04:00",
+          "error_message": null,
+          "job_id": "d70659k69uic73cjvq60",
+          "metrics": {
+            "bss": {
+              "seconds": 21
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:44:06.569964Z",
+              "finished": "2026-03-22T21:44:46.657292Z",
+              "running": "2026-03-22T21:44:07.643459Z"
+            },
+            "usage": {
+              "quantum_seconds": 21,
+              "seconds": 21
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 39.879466052
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 71.288687,
+      "started_at": "2026-03-22T21:43:36Z",
+      "status": "done"
+    },
+    "1": {
+      "csv": "qpu_samples/4y79/samples_4y79_group1_ibm.csv",
+      "finished_at": "2026-03-22T21:45:58Z",
+      "rows": 24000,
+      "run_seed": 866316439,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:45:17.960965-04:00",
+          "error_message": null,
+          "job_id": "d7065rc69uic73cjvqng",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:45:17.960965Z",
+              "finished": "2026-03-22T21:45:57.535545Z",
+              "running": "2026-03-22T21:45:19.546011Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 70.619983,
+      "started_at": "2026-03-22T21:44:47Z",
+      "status": "done"
+    },
+    "2": {
+      "csv": "qpu_samples/4y79/samples_4y79_group2_ibm.csv",
+      "finished_at": "2026-03-22T21:47:07Z",
+      "rows": 24000,
+      "run_seed": 1331430444,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:46:26.516022-04:00",
+          "error_message": null,
+          "job_id": "d7066cgv5rlc73f5m670",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:46:26.516022Z",
+              "finished": "2026-03-22T21:47:06.346625Z",
+              "running": "2026-03-22T21:46:28.473562Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 68.608487,
+      "started_at": "2026-03-22T21:45:58Z",
+      "status": "done"
+    },
+    "3": {
+      "csv": "qpu_samples/4y79/samples_4y79_group3_ibm.csv",
+      "finished_at": "2026-03-22T21:48:15Z",
+      "rows": 24000,
+      "run_seed": 776812501,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:47:34.766124-04:00",
+          "error_message": null,
+          "job_id": "d7066tgv5rlc73f5m6ng",
+          "metrics": {
+            "bss": {
+              "seconds": 21
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:47:34.766124Z",
+              "finished": "2026-03-22T21:48:14.208627Z",
+              "running": "2026-03-22T21:47:35.851383Z"
+            },
+            "usage": {
+              "quantum_seconds": 21,
+              "seconds": 21
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 39.981863521
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 68.067801,
+      "started_at": "2026-03-22T21:47:07Z",
+      "status": "done"
+    },
+    "4": {
+      "csv": "qpu_samples/4y79/samples_4y79_group4_ibm.csv",
+      "finished_at": "2026-03-22T21:49:26Z",
+      "rows": 24000,
+      "run_seed": 1225262068,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:48:46.260443-04:00",
+          "error_message": null,
+          "job_id": "d7067fif84ks73dg0j0g",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:48:46.260443Z",
+              "finished": "2026-03-22T21:49:24.946265Z",
+              "running": "2026-03-22T21:48:47.340346Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 70.822258,
+      "started_at": "2026-03-22T21:48:15Z",
+      "status": "done"
+    },
+    "5": {
+      "csv": "qpu_samples/4y79/samples_4y79_group5_ibm.csv",
+      "finished_at": "2026-03-22T21:50:33Z",
+      "rows": 24000,
+      "run_seed": 1619513054,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:49:51.988998-04:00",
+          "error_message": null,
+          "job_id": "d7067vqf84ks73dg0jgg",
+          "metrics": {
+            "bss": {
+              "seconds": 21
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:49:51.988998Z",
+              "finished": "2026-03-22T21:50:32.648623Z",
+              "running": "2026-03-22T21:49:53.059417Z"
+            },
+            "usage": {
+              "quantum_seconds": 21,
+              "seconds": 21
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 39.879466052
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 67.748589,
+      "started_at": "2026-03-22T21:49:26Z",
+      "status": "done"
+    },
+    "6": {
+      "csv": "qpu_samples/4y79/samples_4y79_group6_ibm.csv",
+      "finished_at": "2026-03-22T21:51:41Z",
+      "rows": 24000,
+      "run_seed": 77938537,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:51:00.435844-04:00",
+          "error_message": null,
+          "job_id": "d7068h2f84ks73dg0k00",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:51:00.435844Z",
+              "finished": "2026-03-22T21:51:39.965442Z",
+              "running": "2026-03-22T21:51:01.860222Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 39.879466052
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 67.455094,
+      "started_at": "2026-03-22T21:50:33Z",
+      "status": "done"
+    },
+    "7": {
+      "csv": "qpu_samples/4y79/samples_4y79_group7_ibm.csv",
+      "finished_at": "2026-03-22T21:52:48Z",
+      "rows": 24000,
+      "run_seed": 990093932,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:52:07.935212-04:00",
+          "error_message": null,
+          "job_id": "d70691qtnsts73ettdug",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:52:07.935212Z",
+              "finished": "2026-03-22T21:52:48.050994Z",
+              "running": "2026-03-22T21:52:09.819464Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 67.555928,
+      "started_at": "2026-03-22T21:51:41Z",
+      "status": "done"
+    },
+    "8": {
+      "csv": "qpu_samples/4y79/samples_4y79_group8_ibm.csv",
+      "finished_at": "2026-03-22T21:53:56Z",
+      "rows": 24000,
+      "run_seed": 453161201,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:53:15.067249-04:00",
+          "error_message": null,
+          "job_id": "d7069iqf84ks73dg0l10",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:53:15.067249Z",
+              "finished": "2026-03-22T21:53:55.586857Z",
+              "running": "2026-03-22T21:53:16.471212Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 67.737158,
+      "started_at": "2026-03-22T21:52:48Z",
+      "status": "done"
+    },
+    "9": {
+      "csv": "qpu_samples/4y79/samples_4y79_group9_ibm.csv",
+      "finished_at": "2026-03-22T21:55:04Z",
+      "rows": 24000,
+      "run_seed": 1832988768,
+      "runtime_details": {
+        "job": {
+          "backend_name": "ibm_cleveland",
+          "creation_date": "2026-03-22T17:54:22.891904-04:00",
+          "error_message": null,
+          "job_id": "d706a3gv5rlc73f5m9n0",
+          "metrics": {
+            "bss": {
+              "seconds": 20
+            },
+            "caller": "qiskit_ibm_runtime~sampler.py",
+            "qiskit_version": "qiskit_ibm_runtime-0.45.1,qiskit-2.3.0*,qiskit_aer-0.17.2",
+            "timestamps": {
+              "created": "2026-03-22T21:54:22.891904Z",
+              "finished": "2026-03-22T21:55:03.340563Z",
+              "running": "2026-03-22T21:54:24.566002Z"
+            },
+            "usage": {
+              "quantum_seconds": 20,
+              "seconds": 20
+            }
+          },
+          "session_id": null,
+          "shots": 2000,
+          "status": "DONE",
+          "usage_estimation": {
+            "quantum_seconds": 38.504837021
+          }
+        },
+        "mode": "ibm_job_batch",
+        "pub_count": 12
+      },
+      "seconds": 67.657098,
+      "started_at": "2026-03-22T21:53:56Z",
+      "status": "done"
+    }
+  },
+  "merged_csv": "qpu_samples/4y79/samples_4y79_all_ibm.csv",
+  "pdbid": "4y79",
+  "sequence": "DACQGDSGG",
+  "settings": {
+    "BETA_LIST": [
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "GROUP_COUNT": 10,
+    "IBM_BACKEND_NAME": "ibm_cleveland",
+    "PENALTY_PARAMS": [
+      10,
+      10,
+      10
+    ],
+    "REPS": 1,
+    "SAMPLES_ROOT": "quantum_data/sampling_result_2/samples",
+    "SAMPLING_RUN_ROOT": "quantum_data/sampling_result_2",
+    "SEEDS": 3,
+    "SHOTS_PER_GROUP": 2000,
+    "TRACKING_ROOT": "quantum_data/sampling_result_2/tracking"
+  },
+  "status": "done",
+  "updated_at": "2026-03-22T21:55:06Z"
+}
