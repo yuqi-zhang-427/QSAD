@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use QSAD in your research, please cite the paper below."
+title: QSAD
+abstract: >-
+  QSAD is an end-to-end pipeline that bridges utility-scale superconducting
+  QPU sampling with protein structure reconstruction: quantum sampling of the
+  Miyazawa-Jernigan lattice Hamiltonian, bitstring decoding with a ten-term
+  lattice energy decomposition, and energy-ranked Ca-to-all-atom
+  reconstruction.
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/qiqi-xingyi/QSAD"
+authors:
+  - family-names: Zhang
+    given-names: Yuqi
+  - family-names: Fang
+    given-names: Bo
+  - family-names: Yang
+    given-names: Yuxin
+  - family-names: Cheng
+    given-names: Feixiong
+  - family-names: Chen
+    given-names: Jieyang
+  - family-names: Fang
+    given-names: Sherry
+  - family-names: Chen
+    given-names: Siwei
+  - family-names: Zhao
+    given-names: Junhan
+  - family-names: Guan
+    given-names: Qiang
+preferred-citation:
+  type: article
+  title: "Quantum Sampling Architecture for Protein Structure Reconstruction on Utility-Scale Hardware"
+  year: 2026
+  journal: "arXiv preprint arXiv:2607.06971"
+  url: "https://arxiv.org/abs/2607.06971"
+  authors:
+    - family-names: Zhang
+      given-names: Yuqi
+    - family-names: Fang
+      given-names: Bo
+    - family-names: Yang
+      given-names: Yuxin
+    - family-names: Cheng
+      given-names: Feixiong
+    - family-names: Chen
+      given-names: Jieyang
+    - family-names: Fang
+      given-names: Sherry
+    - family-names: Chen
+      given-names: Siwei
+    - family-names: Zhao
+      given-names: Junhan
+    - family-names: Guan
+      given-names: Qiang
