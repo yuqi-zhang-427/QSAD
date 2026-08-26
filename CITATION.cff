@@ -10,6 +10,8 @@ abstract: >-
 type: software
 license: Apache-2.0
 repository-code: "https://github.com/qiqi-xingyi/QSAD"
+# Concept DOI: always resolves to the latest archived version.
+doi: 10.5281/zenodo.22105236
 authors:
   - family-names: Zhang
     given-names: Yuqi

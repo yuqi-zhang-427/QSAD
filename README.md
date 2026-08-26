@@ -1,5 +1,8 @@
 # QSAD Pipeline
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22105236.svg)](https://doi.org/10.5281/zenodo.22105236)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 Reference implementation for *Quantum Sampling Architecture for Protein
 Structure Reconstruction on Utility-Scale Hardware*
 ([arXiv:2607.06971](https://arxiv.org/abs/2607.06971)).
