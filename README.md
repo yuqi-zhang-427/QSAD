@@ -1,5 +1,9 @@
 # QSAD Pipeline
 
+Reference implementation for *Quantum Sampling Architecture for Protein
+Structure Reconstruction on Utility-Scale Hardware*
+([arXiv:2607.06971](https://arxiv.org/abs/2607.06971)).
+
 Quantum-sampled protein folding pipeline — from quantum bitstring
 sampling to an all-atom PDB coordinate set. The prediction target is the
 protein **backbone**; see [Scope of the reconstruction](#scope-of-the-reconstruction).
@@ -254,3 +258,16 @@ QSAD is released under the Apache License, Version 2.0 — see [LICENSE](LICENSE
 implementation of Qiskit Nature, (C) Copyright IBM 2021, 2022, also under
 Apache-2.0. The original copyright headers are retained in those files, and
 [NOTICE](NOTICE) records the attribution.
+
+## Citation
+
+If you use QSAD in your research, please cite:
+
+```bibtex
+@article{zhang2026quantum,
+  title={Quantum Sampling Architecture for Protein Structure Reconstruction on Utility-Scale Hardware},
+  author={Zhang, Yuqi and Fang, Bo and Yang, Yuxin and Cheng, Feixiong and Chen, Jieyang and Fang, Sherry and Chen, Siwei and Zhao, Junhan and Guan, Qiang},
+  journal={arXiv preprint arXiv:2607.06971},
+  year={2026}
+}
+```
